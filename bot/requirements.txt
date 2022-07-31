@@ -1,0 +1,11 @@
+cmudict==1.0.2
+deep-translator==1.5.4
+emoji==1.7.0
+num2words==0.5.10
+pytimeparse==1.1.8
+requests==2.27.1
+syllables==1.0.3
+py-cord==2.0.0b5
+lyricsgenius==3.0.1
+psycopg==3.0.11
+git+https://github.com/Devoxin/Lavalink.py@4.0

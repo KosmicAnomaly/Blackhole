@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  bot:
+    container_name: bot
+    build: ./bot
+    restart: always
+    environment:
+      - DISCORD_TOKEN=
+      - GENIUS_TOKEN=
+      - SUPPORT_CHANNEL_ID=
+      - POSTGRES_DB_HOST=
+      - POSTGRES_DB_PORT=
+      - POSTGRES_DB_NAME=
+      - POSTGRES_DB_USERNAME=
+      - POSTGRES_DB_PASSWORD=
+    volumes:
+      - ./logs/bot:/app/logs
+    working_dir: /app

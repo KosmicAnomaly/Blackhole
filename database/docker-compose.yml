@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  db:
+    container_name: database
+    image: postgres:13.4-alpine
+    restart: always
+    networks:
+      - database
+    environment:
+      - POSTGRES_DB=
+      - POSTGRES_USER=
+      - POSTGRES_PASSWORD=
+      - TZ=
+      - PGTZ=
+    volumes:
+      - ./database/pgdata:/var/lib/postgresql/data
+      - ./database/sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql:ro
